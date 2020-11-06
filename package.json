@@ -3,15 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next",
     "build": "next build",
     "start": "next start",
     "export": "next build && next export"
   },
   "dependencies": {
-    "@apollo/react-hooks": "^4.0.0",
-    "apollo-boost": "^0.4.9",
-    "apollo-server-micro": "^2.19.0",
     "axios": "^0.21.0",
     "classnames": "^2.2.6",
     "date-fns": "^2.16.1",
@@ -21,7 +18,6 @@
     "node": "^15.0.1",
     "isomorphic-unfetch": "^3.1.0",
     "next": "^10.0.0",
-    "next-apollo": "^5.0.3",
     "postcss-flexbugs-fixes": "^5.0.0",
     "postcss-preset-env": "^6.7.0",
     "react": "16.13.1",
