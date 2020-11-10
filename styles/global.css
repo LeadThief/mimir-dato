@@ -305,6 +305,14 @@ p.recent__title {
   cursor: pointer;
 }
 
+.moreStories__h2 {
+    width: 100%;
+}
+
+.moreStories__item {
+    width: 40%;
+}
+
 @media screen and (max-width:730px) {
     .blog3__item {
         width: 100%;

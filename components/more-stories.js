@@ -1,12 +1,13 @@
 import PostPreview from '../components/post-preview'
+import utilStyles from '../styles/utils.module.css';
 
 export default function MoreStories({ posts }) {
   return (
-    <section>
-      <h2 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
+    <section className={`moreStories ${utilStyles.flexRSS}`}>
+      <h2 className="moreStories__h2">
         More Stories
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 md:col-gap-16 lg:col-gap-32 row-gap-20 md:row-gap-32 mb-32">
+      <div className="moreStories__item">
         {posts.map(post => (
           <PostPreview
             key={post.slug}
