@@ -12,19 +12,23 @@ export default function Home({ allPosts }) {
       <section className={utilStyles.headingMd}>…</section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
-        <ul className={utilStyles.list}>
-          {allPosts.map(({ postid, date, title, slug }) => (
-            <li className={utilStyles.listItem} key={postid}>
-              <Link href={`/posts/${slug}`}>
-                <a>{title}</a>
-              </Link>
-              <br />
-              <small className={utilStyles.lightText}>
-                <Date dateString={date} />
-              </small>
-            </li>
+        <div className='blogs'>
+          {allPosts.map(({ postid, title, slug, excerpt, coverImage}) => (
+            <Link href={`/posts/${slug}`} key={postid} >
+              <div id={`blog${postid}`} className={`blog__item item${postid} blogs`}>
+                  <div className="blog__image">
+                    <img src={coverImage.responsiveImage.src} alt={title}/>
+                  </div>
+                  <div className="blog__link">
+                    <h2 className="contentAdmin__h2">{title}</h2>
+                  </div>
+                  <div className="blog__intro">
+                    <p>{excerpt}</p>
+                  </div>
+              </div>
+            </Link>
           ))}
-        </ul>
+        </div>
       </section>
     </Layout>
   )
