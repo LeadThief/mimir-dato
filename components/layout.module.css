@@ -4,6 +4,10 @@
   margin: 3rem auto 6rem;
 }
 
+.test {
+  display: flex;
+}
+
 .header {
   display: flex;
   flex-direction: column;
