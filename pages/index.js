@@ -8,7 +8,11 @@ import { getAllPostsForHome } from '../lib/posts';
 export default function Home({ allPosts }) {
   return (
     <Layout home>
-      <Head>…</Head>
+      <Head>
+        <title>
+          Cosamin Blog
+        </title>
+      </Head>
       <section className={utilStyles.headingMd}>…</section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
