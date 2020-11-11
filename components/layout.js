@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import styles from './layout.module.css';
 import Alert from './alert';
+import Nav from '../components/nav';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
@@ -25,6 +26,7 @@ export default function Layout({ children, home, preview }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+      <Nav/>
       <header className={styles.header}>
         {home ? (
           <>
