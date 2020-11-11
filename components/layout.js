@@ -1,12 +1,13 @@
 import Head from 'next/head';
 import styles from './layout.module.css';
+import Alert from './alert';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
 const name = 'Cosamin Blogs'
 export const siteTitle = 'Next.js Sample Website'
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home, preview }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -39,6 +40,7 @@ export default function Layout({ children, home }) {
           </>
         )}
       </header>
+      <Alert preview={preview} />
       <main>{children}</main>
       {!home && (
         <div className={styles.backToHome}>

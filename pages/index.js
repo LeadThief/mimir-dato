@@ -1,11 +1,12 @@
 import Head from 'next/head';
-import Link from 'next/link'
-import Date from '../components/date'
+import Link from 'next/link';
+import Date from '../components/date';
+import Alert from '../components/alert';
 import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import { getAllPostsForHome } from '../lib/posts';
 
-export default function Home({ allPosts }) {
+export default function Home({ allPosts, preview }) {
   return (
     <Layout home>
       <Head>
@@ -16,6 +17,7 @@ export default function Home({ allPosts }) {
       <section className={utilStyles.headingMd}>…</section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
+        <Alert preview={preview} />
         <div className='blogs'>
           {allPosts.map(({ postid, title, slug, excerpt, coverImage}) => (
             <Link href={`/posts/${slug}`} key={postid} >
