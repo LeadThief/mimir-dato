@@ -309,8 +309,9 @@ p.recent__title {
     width: 100%;
 }
 
-.moreStories__item {
+.moreStories__item > div {
     width: 40%;
+    margin-left: 15px;
 }
 
 @media screen and (max-width:730px) {

@@ -3,11 +3,11 @@ import utilStyles from '../styles/utils.module.css';
 
 export default function MoreStories({ posts }) {
   return (
-    <section className={`moreStories ${utilStyles.flexRSS}`}>
+    <section className="moreStories">
       <h2 className="moreStories__h2">
         More Stories
       </h2>
-      <div className="moreStories__item">
+      <div className={`moreStories__item ${utilStyles.flexRSS}`}>
         {posts.map(post => (
           <PostPreview
             key={post.slug}
