@@ -1,6 +1,6 @@
 {
   "public": true,
   "rewrites": [
-    { "source": "/_next/static/**", "destination": "https://blogs.cosamin.com/_next/static/**" }
+    { "source": "/_next/static/*.css", "destination": "https://blogs.cosamin.com/_next/static/*.css" }
   ]
 }
