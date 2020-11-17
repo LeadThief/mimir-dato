@@ -1,6 +1,6 @@
 {
   "public": true,
-  "rewrites": [
-    { "source": "/_next/static/*.css", "destination": "https://blogs.cosamin.com/_next/static/*.css" }
+  "builds": [
+    { "src": "*.js", "use": "@vercel/node" }
   ]
 }
