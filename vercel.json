@@ -1,8 +1,6 @@
 {
-  "public": true
-}
-{
   "redirects": [
     { "source": "/_next/static/css/47c4cfd86b16ba15b416.css", "destination": "https://blogs.cosamin.com/_next/static/css/47c4cfd86b16ba15b416.css" },
-  ]
+  ],
+   "public": true
 }
