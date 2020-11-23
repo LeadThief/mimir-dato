@@ -18,7 +18,7 @@ export default function Home({ allPosts, preview }) {
         <Alert preview={preview} />
         <div className='blogs'>
           {allPosts.map(({ postid, title, slug, excerpt, coverImage}) => (
-            <Link href={`/posts/${slug}`} key={postid} >
+            <Link as={`/blog/${slug}`} href={`/blog/${slug}`} key={postid} >
               <div id={`blog${postid}`} className={`blog__item item${postid} blogs`}>
                   <div className="blog__image">
                     <img src={coverImage.responsiveImage.src} alt={title}/>
