@@ -7,6 +7,7 @@ export default function CoverImage({ title, responsiveImage, slug }) {
     <Image
       data={{
         ...responsiveImage,
+        src: `${responsiveImage.src}`,
         alt: `Cover Image for ${title}`,
       }}
       className={cn('shadow-small', {
