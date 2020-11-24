@@ -19,17 +19,19 @@ export default function Home({ allPosts, preview }) {
         <div className='blogs'>
           {allPosts.map(({ postid, title, slug, excerpt, coverImage}) => (
             <Link as={`/blog/${slug}`} href={`/blog/${slug}`} key={postid} >
+            <a className="hover:underline">
               <div id={`blog${postid}`} className={`blog__item item${postid} blogs`}>
                   <div className="blog__image">
                     <img src={coverImage.responsiveImage.src} alt={title}/>
                   </div>
                   <div className="blog__link">
-                    <h2 className="contentAdmin__h2"><a className="hover:underline">{title}</a></h2>
+                    <h2 className="contentAdmin__h2">{title}</h2>
                   </div>
                   <div className="blog__intro">
                     <p>{excerpt}</p>
                   </div>
               </div>
+              </a>
             </Link>
           ))}
         </div>
