@@ -24,7 +24,7 @@ export default function Home({ allPosts, preview }) {
                     <img src={coverImage.responsiveImage.src} alt={title}/>
                   </div>
                   <div className="blog__link">
-                    <h2 className="contentAdmin__h2">{title}</h2>
+                    <h2 className="contentAdmin__h2"><a className="hover:underline">{title}</a></h2>
                   </div>
                   <div className="blog__intro">
                     <p>{excerpt}</p>
